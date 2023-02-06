@@ -16,9 +16,9 @@ include 'database.php';
     <h1 class="titel">Inloggen</h1>
     <form class="contactform" action="includes/login.inc.php" method="post">
         <h3>Zet je gebruikersnaam of email hier.</h3> 
-        <input type="text" name="uid" placeholder="Gebruikersnaam/Email..."><br> 
+        <input type="text" name="usersUid" placeholder="Gebruikersnaam/Email..."><br> 
         <h3>Zet je wachtwoord hier.</h3>
-        <input type="password" name="pwd" placeholder="Wachtwoord..."><br>
+        <input type="password" name="usersPwd" placeholder="Wachtwoord..."><br>
         <button type="submit" name="submit">Inloggen</button>
     </form>  
 <!-- Code voor de erorr massages -->

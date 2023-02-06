@@ -1,8 +1,8 @@
 <?php
 //Deze functie checked of alle functie en geeft een foutmelding bij een false en execute het programma bij en true
 if (isset($_POST["submit"])) {
-    $username = $_POST["uid"];    
-    $pwd = $_POST["pwd"];
+    $username = $_POST["usersUid"];    
+    $pwd = $_POST["usersPwd"];
 
     require_once '../database.php';
     require_once 'functions.inc.php';

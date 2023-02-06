@@ -122,7 +122,7 @@ function loginUser($conn, $username, $pwd) {
 
 //Deze functie checked zorgt er voor dat de data die uit de registratieforum in de database komt met een hashedwachtwoord
 function createAdmin($conn, $name, $email, $username, $pwd, $admin) {
-  $sql = "INSERT INTO users (usersName, usersEmail, usersUid, usersPwd, usersAdmin) VALUES (?, ?, ?, ?, ?);";
+  $sql = "INSERT INTO users (usersName, usersEmail, usersUid, usersPwd) VALUES (?, ?, ?, ?);";
   $stmt = mysqli_stmt_init($conn); 
   if (!mysqli_stmt_prepare($stmt, $sql)) {
       header("location: ../admin.php?error=stmtfailed");

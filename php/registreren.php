@@ -16,13 +16,13 @@ include 'database.php';
     <h1 class="titel">Registreren</h1>
     <form class="contactform" action="includes/signup.inc.php" method="post">
         <h3>Zet je naam hier.</h3>
-        <input type="text" name="name" placeholder="Naam..."><br> 
+        <input type="text" name="usersName" placeholder="Naam..."><br> 
         <h3>Zet je email hier.</h3>
-        <input type="text" name="email" placeholder="Email..."><br>
+        <input type="text" name="usersEmail" placeholder="Email..."><br>
         <h3>Zet je gebruikersnaam hier.</h3>
-        <input type="text" name="uid" placeholder="Gebruikersnaam..."><br>
+        <input type="text" name="usersUid" placeholder="Gebruikersnaam..."><br>
         <h3>Zet je wachtwoord hier.</h3>
-        <input type="password" name="pwd" placeholder="Wachtwoord..."><br>
+        <input type="password" name="usersPwd" placeholder="Wachtwoord..."><br>
         <h3>Herhaal je wachtwoord.</h3>
         <input type="password" name="pwdrepeat" placeholder="Herhaal wachtwoord..."><br><br>
         <button type="submit" name="submit">Registreren</button>

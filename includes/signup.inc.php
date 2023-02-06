@@ -1,10 +1,10 @@
 <?php
 //Deze functie checked of alle functie en geeft een foutmelding bij een false en execute het programma bij en true
 if (isset($_POST["submit"])) {
-    $name = $_POST["name"];
-    $email = $_POST["email"];
-    $username = $_POST["uid"];
-    $pwd = $_POST["pwd"];
+    $name = $_POST["usersName"];
+    $email = $_POST["usersEmail"];
+    $username = $_POST["usersUid"];
+    $pwd = $_POST["usersPwd"];
     $pwdRepeat = $_POST["pwdrepeat"];
 
     require_once '../database.php';
