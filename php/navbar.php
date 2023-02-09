@@ -14,16 +14,17 @@
 ?>
 <!-- Navigatiebalk -->
 <div class="navbar">
-<ul class="nav-ul">
-<li class="nav-li">
-    <a href="index.php">Home</a>
-    <a href="reserveringen.php">Reserveringen</a>
-    <a href="workshop.php">Workshop</a>
-    <a href="contact.php">Contact</a>
-    <a href="registreren.php">Registreren</a>
-    <a href="inloggen.php">Inloggen</a>
-</li>
-</ul>
+<div class="logo">
+  <a href="index.php"><img src="../images/image-removebg-preview.png"></a>
+</div>
+<div class="nav">
+  <a href="index.php">Home</a>
+  <a href="reserveringen.php">Reserveringen</a>
+  <a href="workshop.php">Workshop</a>
+  <a href="contact.php">Contact</a>
+  <a href="registreren.php">Registreren</a>
+  <a href="inloggen.php">Inloggen</a>
+</div>
 </div>
 </body>
 </html>
