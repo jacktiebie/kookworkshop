@@ -2,7 +2,7 @@
 <html lang="nl">
 <Head>
     <meta charset="utf-8">
-    <link rel=stylesheet href="css/custom.css">
+    <link rel=stylesheet href="../css/custom.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&family=Viga&display=swap" rel="stylesheet">
