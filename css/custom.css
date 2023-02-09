@@ -1,5 +1,5 @@
 @import url(https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&family=Viga&display=swap);
-/*font-family: 'Oxygen', sans-serif;*/
+/*ALGEMEEN*/
 * {
     padding: 0;
     margin: 0;
@@ -8,6 +8,13 @@ html {
     width: 100vw;
     height: 100vh;
 }
+p {
+    font-family: 'Oxygen', sans-serif;
+}
+h1 {
+    font-family: 'Oxygen', sans-serif;
+}
+/*ALGEMEEN*/
 li::marker {
     display: none;
 }
@@ -23,11 +30,9 @@ li::marker {
     align-items: center;
     justify-content: flex-end;
     gap: 30px;
-    float: right;
 }
 .navbar a {
     font-family: 'Viga', sans-serif;
-    float: right;
     color: #fff;
     text-decoration: none;
     font-size: 18px;
@@ -46,4 +51,55 @@ li::marker {
 }
 .navbar .logo img {
     height: 100px;
+}
+/*INDEX*/
+.container {
+    height: 400px;
+}
+/*FOOTER*/
+.footer {
+  height: 200px;
+  padding-right: 50px;
+  background-color: #2F2D2E;
+  display: flex;
+  justify-content: space-between;
+}
+.footer .contact {
+  display: flex;
+  align-items: flex-start;
+  gap: 50px;
+  padding: 40px 0px 0px 50px;
+}
+.footer .logo {
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: flex-end;
+}
+.footer .contact .col1 {
+    color: #fff;
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+.footer .contact .col1 a{
+    font-family: 'Oxygen', sans-serif;  
+    color: #86B950;
+    text-decoration: none;
+    font-size: 18px;
+}
+.footer .contact .col1 a::after {
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: #86B950;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.footer .contact .col1 a:hover::after{
+	width: 100%;
 }

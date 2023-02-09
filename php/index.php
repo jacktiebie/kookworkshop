@@ -8,15 +8,17 @@
 <body>
 <!-- Navigatiebalk en databaseconnectie -->
 <?php 
-include 'test.php';  
+/*include 'test.php';*/
+include 'navbar.php'; 
 ?>
 <!-- Content van de pagina -->
 <div class="container">
 
 </div>  
 <!-- Footer van de pagina met contactgegevens -->
-<footer>
 
-</footer>
+<?php 
+include 'footer.php'; 
+?>
 </body>
 </html>
