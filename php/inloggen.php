@@ -8,16 +8,18 @@
 <body>
 <!-- Navigatiebalk en databaseconnectie -->
 <?php 
-include 'database.php';
+include '../includes/db.inc.php';
+include 'navbar.php'; 
 ?>
 <!-- Inputfields voor het inloggen -->
 <div class="container">
-    <div class="mainpage4">
+  <div class="col1">
+    <div class="inloggen">
     <h1 class="titel">Inloggen</h1>
     <form class="contactform" action="includes/login.inc.php" method="post">
-        <h3>Zet je gebruikersnaam of email hier.</h3> 
+        <p>Zet je gebruikersnaam of email hier.</p> 
         <input type="text" name="usersUid" placeholder="Gebruikersnaam/Email..."><br> 
-        <h3>Zet je wachtwoord hier.</h3>
+        <p>Zet je wachtwoord hier.</p>
         <input type="password" name="usersPwd" placeholder="Wachtwoord..."><br>
         <button type="submit" name="submit">Inloggen</button>
     </form>  
@@ -34,9 +36,10 @@ include 'database.php';
     ?>
 </div>
 </div>
+</div>
 <!-- Footer van de pagina met contactgegevens -->
-<footer>
-
-</footer>
+<?php
+include 'footer.php'; 
+?>
 </body>
 </html>

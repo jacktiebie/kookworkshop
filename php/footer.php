@@ -22,7 +22,7 @@
 </div>
 </div>
 <div class="logo">
-<a href="index.php"><img src="../images/image-removebg-preview.png"></a>
+<a href="index.php"><img src="../foto/image-removebg-preview.png"></a>
 <p>Copyright 2023 Kookworkshops.nl</p>
 </div>
 </div>

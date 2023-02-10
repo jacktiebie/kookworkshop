@@ -12,11 +12,11 @@
 <!-- Navigatiebalk -->
 <div class="navbar">
 <div class="logo">
-  <a href="index.php"><img src="../images/image-removebg-preview.png"></a>
+  <a href="index.php"><img src="../foto/image-removebg-preview.png"></a>
 </div>
 <div class="nav">
   <a href="index.php">Home</a>
-  <a href="reserveringen.php">Reserveringen</a>
+  <a href="reserveringen.php">Reserveren</a>
   <a href="workshop.php">Workshop</a>
   <a href="contact.php">Contact</a>
   <a href="registreren.php">Registreren</a>
