@@ -8,23 +8,20 @@
 <body>
 <!-- Navigatiebalk en databaseconnectie -->
 <?php 
-include 'database.php';
+include '../includes/db.inc.php';
+include 'navbar.php'; 
 ?>
 <!-- Inputfields voor de registratie pagina -->
 <div class="container">
-    <div class="mainpage3">
+<div class="col1">
+    <div class="inloggen">
     <h1 class="titel">Registreren</h1>
-    <form class="contactform" action="includes/signup.inc.php" method="post">
-        <h3>Zet je naam hier.</h3>
+    <form action="../includes/signup.inc.php" method="post">
         <input type="text" name="usersName" placeholder="Naam..."><br> 
-        <h3>Zet je email hier.</h3>
         <input type="text" name="usersEmail" placeholder="Email..."><br>
-        <h3>Zet je gebruikersnaam hier.</h3>
         <input type="text" name="usersUid" placeholder="Gebruikersnaam..."><br>
-        <h3>Zet je wachtwoord hier.</h3>
         <input type="password" name="usersPwd" placeholder="Wachtwoord..."><br>
-        <h3>Herhaal je wachtwoord.</h3>
-        <input type="password" name="pwdrepeat" placeholder="Herhaal wachtwoord..."><br><br>
+        <input type="password" name="pwdrepeat" placeholder="Herhaal wachtwoord..."><br>
         <button type="submit" name="submit">Registreren</button>
 </form>
 <!-- Code voor de erorr massages voor de registratie pagina -->
@@ -55,9 +52,10 @@ include 'database.php';
 ?>
 </div>
 </div>
+</div>
 <!-- Footer van de pagina met contactgegevens -->
-<footer>
-
-</footer>
+<?php 
+include 'footer.php'; 
+?>
 </body>
 </html>

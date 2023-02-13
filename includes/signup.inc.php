@@ -7,33 +7,33 @@ if (isset($_POST["submit"])) {
     $pwd = $_POST["usersPwd"];
     $pwdRepeat = $_POST["pwdrepeat"];
 
-    require_once '../database.php';
+    require_once 'db.inc.php';
     require_once 'functions.inc.php';
 
     if (emptyInputSignup($name, $email, $username, $pwd, $pwdRepeat) !== false) {
-        header("location: ../registreren.php?error=emptyinput");
+        header("location: ../php/registreren.php?error=emptyinput");
         exit();
     }
     if (invalidUid($username) !== false) {
-        header("location: ../registreren.php?error=invaliduid");
+        header("location: ../php/registreren.php?error=invaliduid");
         exit();
     }
     if (invalidEmail($email) !== false) {
-        header("location: ../registreren.php?error=invalidemail");
+        header("location: ../php/registreren.php?error=invalidemail");
         exit();
     }
     if (pwdMatch($pwd, $pwdRepeat) !== false) {
-        header("location: ../registreren.php?error=nomatchfound");
+        header("location: ../php/registreren.php?error=nomatchfound");
         exit();
     }
     if (uidExists($conn, $username, $email) !== false) {
-        header("location: ../registreren.php?error=usernametaken");
+        header("location: ../php/registreren.php?error=usernametaken");
         exit();
     }
 
     createUser($conn, $name , $email, $username, $pwd);
 }
 else {
-    header("location: ../registreren.php"); 
+    header("location: ../php/registreren.php"); 
     exit(); 
 }

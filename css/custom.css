@@ -72,19 +72,49 @@ li::marker {
   background-color: #86b94f;
   padding: 20px 50px;
   border-radius: 15px;
-  margin-top: 50px;
+  margin: 50px 0px;
   width: 30%;
 }
 .col1 .inloggen h1 {
   color: #fff;
   padding: 20px;
   text-align: center;
+  padding: 20px 20px 40px 20px;
 }
 .col1 .inloggen h3 {
   color: #fff;
 }
 .col1 .inloggen p {
   color: #fff;
+}
+.col1 .inloggen form {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  color: #000;
+  gap: 10px;
+}
+.col1 .inloggen input {
+ width: 80%;
+ color: #000;
+ font-size: 18px;
+ text-align: center;
+ padding: 5px 0px;
+}
+.col1 .inloggen button {
+background-color: #fff;
+color: #000;
+font-weight: 600;
+padding: 5px 40px;
+font-size: 18px;
+border: solid 1px #fff;
+margin-bottom: 30px;
+}
+.col1 .inloggen button:hover {
+  border: solid 1px #86b94f;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 /*Font kleur: #000 & #FFF
 Grijs: #2f2d2d
