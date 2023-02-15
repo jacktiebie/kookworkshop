@@ -17,7 +17,7 @@ include 'navbar.php';
     <div class="inloggen">
     <h1 class="titel">Inloggen</h1>
     <form action="../includes/login.inc.php" method="post">
-        <input type="text" name="usersUid" placeholder="Gebruikersnaam/Email..."><br> 
+        <input type="text" name="usersUid" placeholder="Gebruikersnaam/Email..."><br>
         <input type="password" name="usersPwd" placeholder="Wachtwoord..."><br>
         <button type="submit" name="submit">Inloggen</button>
     </form>  
