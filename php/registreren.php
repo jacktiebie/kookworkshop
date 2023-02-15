@@ -12,7 +12,6 @@ include '../includes/db.inc.php';
 include 'navbar.php'; 
 ?>
 <!-- Inputfields voor de registratie pagina -->
-<div class="container">
 <div class="col1">
     <div class="inloggen">
     <h1 class="titel">Registreren</h1>
@@ -50,7 +49,6 @@ include 'navbar.php';
       }
     }
 ?>
-</div>
 </div>
 </div>
 <!-- Footer van de pagina met contactgegevens -->

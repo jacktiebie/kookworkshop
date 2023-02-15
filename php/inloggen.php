@@ -12,7 +12,6 @@ include '../includes/db.inc.php';
 include 'navbar.php'; 
 ?>
 <!-- Inputfields voor het inloggen -->
-<div class="container">
   <div class="col1">
     <div class="inloggen">
     <h1 class="titel">Inloggen</h1>
@@ -32,7 +31,6 @@ include 'navbar.php';
           }
         }
     ?>
-</div>
 </div>
 </div>
 <!-- Footer van de pagina met contactgegevens -->

@@ -20,7 +20,11 @@ h3 {
 body {
     background-color: #f4fff1;
 }
-/*ALGEMEEN*/
+.divider {
+  height: 30px;
+  background-color: #2F2D2E;
+}
+/*NAVBAR*/
 li::marker {
     display: none;
 }
@@ -59,7 +63,104 @@ li::marker {
     height: 100px;
 }
 /*INDEX*/
-
+.home .blok1 {
+background-image: url('../foto/image.png');
+background-size: cover;
+background-repeat: no-repeat;
+height: 500px;
+}
+.home .blok1 .col {
+float: left;
+width: 40%;
+background-color: hsl(330, 2%, 18%, 0.7);
+height: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+gap: 50px;
+color: #fff;
+}
+.home .blok1 .col p {
+  font-size: 24px;
+  line-height: 24px;
+}
+.home .blok1 .col h1 {
+  font-size: 48px;
+  line-height: 48px;
+}
+.home .blok1 img{
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.home .blok2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 100px;
+}
+.home .blok2 .col {
+  padding: 50px 0px;
+  text-align: center;
+}
+.home .blok2 .col img {
+  padding-bottom: 25px;
+  height: 250px;
+  width: 250px;
+  border: 100px;
+}
+.home .blok2 .col p {
+ font-size: 32px;
+ line-height: 32px;
+ font-weight: 600;
+}
+.home .blok3 {
+  display: flex;
+  justify-content: flex-start;
+  gap: 100px;
+  flex-direction: row;
+  align-items: center;
+}
+.home .blok3 .col img {
+  background-size: cover;
+  display: block;
+  background-repeat: no-repeat;
+}
+.home .blok3 .col h1 {
+  font-size: 28px;
+  line-height: 28px;
+  padding-bottom: 25px;
+}
+.home .blok3 .col p {
+  font-size: 20px;
+  line-height: 22px;
+}
+.home .blok4 {
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 100px;
+}
+.home .blok4 .col img {
+  background-size: cover;
+  display: block;
+  background-repeat: no-repeat;
+}
+.home .blok4 .col h1 {
+  font-size: 28px;
+  line-height: 28px;
+  padding-bottom: 25px;
+}
+.home .blok4 .col p {
+  font-size: 20px;
+  line-height: 22px;
+}
 /*INLOGGEN*/
 .col1{
   display: flex;
@@ -125,7 +226,7 @@ Achtergrond groen: #f4fff1*/
     background-color: #2F2D2E;
     display: flex;
     justify-content: space-between;
-    position: absolute;
+    position: relative;
     bottom: 0;
     width: 100%;
     height: 10rem;

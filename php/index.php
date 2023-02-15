@@ -12,9 +12,53 @@
 include 'navbar.php'; 
 ?>
 <!-- Content van de pagina -->
-<div class="container">
-
-</div>  
+<div class="home">
+  <div class="blok1">
+    <div class="col">
+      <h1>Kookworkshop.nl</h1>
+      <p>Voor de best kookworkshop</p>
+    </div> 
+  </div> 
+  <div class="divider"></div> 
+  <div class="blok2">
+  <div class="col">
+      <img src='../foto/image.png'>
+      <p>Voor de best kookworkshop</p>
+    </div> 
+    <div class="col">
+      <img src='../foto/image.png'>
+      <p>Voor de best kookworkshop</p>
+    </div> 
+    <div class="col">
+      <img src='../foto/image.png'>
+      <p>Voor de best kookworkshop</p>
+    </div> 
+  </div> 
+  <div class="divider"></div> 
+  <div class="blok3">
+  <div class="col">
+  <img src='../foto/Basic-Cooking-Methods.jpg'>
+    </div> 
+    <div class="col">
+      <h1>Kookworkshop.nl</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <br>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div> 
+  </div> 
+  <div class="divider"></div> 
+  <div class="blok4">
+    <div class="col">
+      <h1>Kookworkshop.nl</h1>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <br>
+      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    </div>
+    <div class="col">
+  <img src='../foto/Basic-Cooking-Methods.jpg'>
+    </div> 
+</div> 
+</div> 
 <!-- Footer van de pagina met contactgegevens -->
 
 <?php 
