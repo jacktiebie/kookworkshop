@@ -12,8 +12,8 @@ include '../includes/db.inc.php';
 include 'navbar.php'; 
 ?>
 <!-- Inputfields voor de registratie pagina -->
-<div class="col1">
-    <div class="inloggen">
+<div class="inloggen">
+    <div class="col1">
     <h1 class="titel">Registreren</h1>
     <form action="../includes/signup.inc.php" method="post">
         <input type="text" name="usersName" placeholder="Naam..."><br> 
@@ -33,7 +33,7 @@ include 'navbar.php';
           echo "<p class='Fout'>Gebruik een goede naam!</p>";
       }
       else if ($_GET["error"] == "invalidemail") {
-          echo "<p class='Fout'>Gebruiken een goede E-mail!</p>";
+          echo "<p class='Fout'>Gebruik een goed E-mail!</p>";
       }
       else if ($_GET["error"] == "nomatchfound") {
           echo "<p class='Fout'>Wachtwoorden zijn niet gelijk!</p>";

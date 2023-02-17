@@ -27,6 +27,9 @@ h1 {
 h3 {
     font-family: 'Viga', sans-serif;
 }
+a {
+  font-family: 'Oxygen', sans-serif;
+}
 body {
     background-color: var(--lightgreen);
 }
@@ -172,98 +175,183 @@ color: var(--white);
   line-height: 22px;
 }
 /*INLOGGEN*/
-.col1{
+.inloggen {
   display: flex;
   align-items: center;
   align-content: center;
   flex-direction: column;
   justify-content: center;   
 }
-.col1 .inloggen {
-  background-color: #86b94f;
+.inloggen .col1 {
+  background-color: var(--green);
   padding: 20px 50px;
   border-radius: 15px;
   margin: 50px 0px;
   width: 30%;
 }
-.col1 .inloggen h1 {
-  color: #fff;
+.inloggen .col1 h1 {
+  color: var(--white);
   padding: 20px;
   text-align: center;
   padding: 20px 20px 40px 20px;
 }
-.col1 .inloggen h3 {
-  color: #fff;
+.inloggen .col1 h3 {
+  color: var(--white);
 }
-.col1 .inloggen p {
-  color: #fff;
+.inloggen .col1 p {
+  color: var(--white);
 }
-.col1 .inloggen form {
+.inloggen .col1 form {
   display: flex;
   flex-direction: column;
   align-content: center;
   justify-content: center;
   align-items: center;
-  color: #000;
+  color: var(--black);
   gap: 10px;
 }
-.col1 .inloggen input {
+.inloggen .col1 input {
  width: 80%;
- color: #000;
+ color: (var(--black));
  font-size: 18px;
  text-align: center;
  padding: 5px 0px;
 }
-.col1 .inloggen button {
-background-color: #fff;
-color: #000;
+.inloggen .col1 button {
+background-color: var(--white);
+color: var(--black);
 font-weight: 600;
 padding: 5px 40px;
 font-size: 18px;
-border: solid 1px #fff;
+border: solid 1px var(--white);
 margin-bottom: 30px;
 }
-.col1 .inloggen button:hover {
-  border: solid 1px #86b94f;
+.inloggen .col1  button:hover {
+  border: solid 1px var(--green);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+/*CONTACT*/
+.contact {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.contact .col1 {
+  background-color: var(--green);
+  border-radius: 15px;
+  margin: 50px 0px;
+  width: 30%;
+  padding: 40px;
+}
+.contact .col1 h1 {
+  color: var(--white);
+  text-align: center;
+  padding-bottom: 30px;
+}
+.contact .col1 a {
+  color: var(--white);
+  padding-bottom: 30px;
+  text-decoration: none;
+}
+.contact .col1 a:hover {
+  
+  text-decoration: none;
+}
+.contact .col2 {
+  width: 50%;
+  background-color: var(--green);
+  border-radius: 15px;
+  margin: 50px 0px;
+}
+.contact .col2 h1 {
+  color: var(--white);
+  text-align: center;
+  padding-top: 40px;
+}
+.contact .col1 h3, .contact .col2 h3 {
+  color: var(--white);
+}
+.contact .col1 p, .contact .col2 p {
+  color: var(--white);
+  font-size: 20px;
+  line-height: 22px;
+}
+.contact .col2 form {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  color: var(--black);
+  gap: 10px;
+}
+.contact .col2 input {
+ width: 70%;
+ color: var(--black);
+ font-size: 18px;
+ text-align: center;
+ padding: 5px 0px;
+}
+.contact .col2 textarea {
+  width: 70%;
+  color: var(--black);
+  font-size: 18px;
+  text-align: center;
+  padding: 5px 0px;
+  font-family: 'Oxygen', sans-serif;
+ }
+.contact .col2 button {
+background-color: var(--white);
+color: var(--black);
+font-weight: 600;
+padding: 5px 40px;
+font-size: 18px;
+border: solid 1px var(--white);
+margin-bottom: 30px;
+}
+.contact .col2  button:hover {
+  border: solid 1px var(--green);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 /*FOOTER*/
 .footer {
-    background-color: #2F2D2E;
+    background-color: var(--darkgray);
     display: flex;
     justify-content: space-between;
     position: relative;
     height: 10rem;
 }
-.footer .contact {
+.footer .footercontact {
   display: flex;
   align-items: flex-start;
   gap: 50px;
   padding: 40px 0px 0px 50px;
 }
 .footer .logo {
-  color: #fff;
+  color: var(--white);
   display: flex;
   justify-content: center;
   flex-direction: column;
   align-items: flex-end;
   padding-right: 50px;
 }
-.footer .contact .col1 {
-    color: #fff;
+.footer .footercontact .col1 {
+    color: var(--white);
     display: flex;
     gap: 20px;
     align-items: center;
     flex-direction: column;
     justify-content: space-evenly;
 }
-.footer .contact .col1 a{
+.footer .footercontact .col1 a{
     font-family: 'Oxygen', sans-serif;  
     color: var(--green);
     text-decoration: none;
     font-size: 18px;
 }
-.footer .contact .col1 a::after {
+.footer .footercontact .col1 a::after {
     content: '';
     width: 0%;
     height: 2px;

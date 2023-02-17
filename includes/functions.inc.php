@@ -76,9 +76,9 @@ function createUser($conn, $name, $email, $username, $pwd) {
         exit(); 
     }
 
-    $hashedPwd = Password_hash($pwd, PASSWORD_DEFAULT);
+    $pwdHashed = Password_hash($pwd, PASSWORD_DEFAULT);
 
-    mysqli_stmt_bind_param($stmt, "ssss", $name, $email, $username, $hashedPwd);
+    mysqli_stmt_bind_param($stmt, "ssss", $name, $email, $username, $pwdHashed);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
     header("location: ../php/registreren.php?error=none");

@@ -12,8 +12,8 @@ include '../includes/db.inc.php';
 include 'navbar.php'; 
 ?>
 <!-- Inputfields voor het inloggen -->
-  <div class="col1">
-    <div class="inloggen">
+  <div class="inloggen">
+    <div class="col1">
     <h1 class="titel">Inloggen</h1>
     <form action="../includes/login.inc.php" method="post">
         <input type="text" name="usersUid" placeholder="Gebruikersnaam/Email..."><br>

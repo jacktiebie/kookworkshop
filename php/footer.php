@@ -11,7 +11,7 @@
 ?>
 <!-- Navigatiebalk -->
 <div class="footer">
-<div class="contact">
+<div class="footercontact">
 <div class="col1">
 <h1>Contact</h1>
 <a href="contact.php">Contact pagina</a>
