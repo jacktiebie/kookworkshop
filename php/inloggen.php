@@ -34,8 +34,10 @@ include 'navbar.php';
 </div>
 </div>
 <!-- Footer van de pagina met contactgegevens -->
+<div class="bruhfooter">
 <?php
 include 'footer.php'; 
 ?>
+</div>
 </body>
 </html>

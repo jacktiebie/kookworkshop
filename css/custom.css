@@ -5,12 +5,18 @@
     margin: 0;
 }
 html {
-    width: 100vw;
     height: 100vh;
 }
 body {
-  width: 100vw;
   height: 100vh;
+}
+:root {
+  --white: #fff;
+  --black: #000;
+  --green: #86b94f;
+  --lightgreen: #f4fff1;
+  --darkgray: #2f2d2d;
+  --lightgray: #f0f0f0;
 }
 p {
     font-family: 'Oxygen', sans-serif;
@@ -22,11 +28,11 @@ h3 {
     font-family: 'Viga', sans-serif;
 }
 body {
-    background-color: #f4fff1;
+    background-color: var(--lightgreen);
 }
 .divider {
   height: 30px;
-  background-color: #2F2D2E;
+  background-color: var(--darkgray);
 }
 /*NAVBAR*/
 li::marker {
@@ -35,7 +41,7 @@ li::marker {
 .navbar {
     height: 100px;
     padding-right: 50px;
-    background-color: #2F2D2E;
+    background-color: var(--darkgray);
     display: flex;
     justify-content: space-between;
 }
@@ -47,7 +53,7 @@ li::marker {
 }
 .navbar .nav a {
     font-family: 'Viga', sans-serif;
-    color: #fff;
+    color: var(--white);
     text-decoration: none;
     font-size: 18px;
 }   
@@ -55,7 +61,7 @@ li::marker {
     content: '';
     width: 0%;
     height: 2px;
-    background: #fff;
+    background: var(--white);
     display: block;
     margin: auto;
     transition: 0.5s;
@@ -83,7 +89,7 @@ flex-direction: column;
 align-items: center;
 justify-content: center;
 gap: 50px;
-color: #fff;
+color: var(--white);
 }
 .home .blok1 .col p {
   font-size: 24px;
@@ -221,18 +227,12 @@ margin-bottom: 30px;
   border: solid 1px #86b94f;
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
-/*Font kleur: #000 & #FFF
-Grijs: #2f2d2d
-Groen: #86b94f
-Achtergrond groen: #f4fff1*/
 /*FOOTER*/
 .footer {
     background-color: #2F2D2E;
     display: flex;
     justify-content: space-between;
     position: relative;
-    bottom: 0;
-    width: 100%;
     height: 10rem;
 }
 .footer .contact {
@@ -259,7 +259,7 @@ Achtergrond groen: #f4fff1*/
 }
 .footer .contact .col1 a{
     font-family: 'Oxygen', sans-serif;  
-    color: #86b94f;
+    color: var(--green);
     text-decoration: none;
     font-size: 18px;
 }
@@ -267,10 +267,15 @@ Achtergrond groen: #f4fff1*/
     content: '';
     width: 0%;
     height: 2px;
-    background: #86b94f;
+    background: var(--green);
     display: block;
     margin: auto;
     transition: 0.5s;
+}
+.bruhfooter {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
 }
 .footer .contact .col1 a:hover::after{
 	width: 100%;
