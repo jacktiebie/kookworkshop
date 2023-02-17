@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1:3306
--- Gegenereerd op: 13 feb 2023 om 16:01
+-- Gegenereerd op: 17 feb 2023 om 11:00
 -- Serverversie: 10.4.21-MariaDB
 -- PHP-versie: 8.0.10
 
@@ -47,16 +47,15 @@ CREATE TABLE `users` (
   `usersName` varchar(32) NOT NULL,
   `usersEmail` varchar(32) NOT NULL,
   `usersUid` varchar(32) NOT NULL,
-  `usersPwd` varchar(32) NOT NULL,
-  `pwdrepeat` varchar(32) NOT NULL
+  `usersPwd` varchar(64) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
 -- Gegevens worden geëxporteerd voor tabel `users`
 --
 
-INSERT INTO `users` (`usersId`, `usersName`, `usersEmail`, `usersUid`, `usersPwd`, `pwdrepeat`) VALUES
-(3, 'joel', '258882@cursist.rockopnh.nl', 'joel', '$2y$10$qWVcHdP2TKmFRdCTIAIPsuIhO', '');
+INSERT INTO `users` (`usersId`, `usersName`, `usersEmail`, `usersUid`, `usersPwd`) VALUES
+(9, 'joel', '258882@nl.nl', 'joel', '$2y$10$sptI8Jwfvo0klJ0H1t70j.gHJ');
 
 --
 -- Indexen voor geëxporteerde tabellen
@@ -88,7 +87,7 @@ ALTER TABLE `reserve-form`
 -- AUTO_INCREMENT voor een tabel `users`
 --
 ALTER TABLE `users`
-  MODIFY `usersId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `usersId` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
