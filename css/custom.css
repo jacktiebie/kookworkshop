@@ -1,72 +1,65 @@
 @import url(https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&family=Viga&display=swap);
 /*ALGEMEEN*/
 * {
-    padding: 0;
-    margin: 0;
+  padding: 0;
+  margin: 0;
+  font-family: "Oxygen", sans-serif;
 }
 html {
-    width: 100vw;
-    height: 100vh;
+  width: 100vw;
+  height: 100vh;
 }
-p {
-    font-family: 'Oxygen', sans-serif;
-}
-h1 {
-    font-family: 'Viga', sans-serif;
-}
-h3 {
-    font-family: 'Viga', sans-serif;
-}
+
 body {
-    background-color: #f4fff1;
+  background-color: #f4fff1;
 }
 /*ALGEMEEN*/
 li::marker {
-    display: none;
+  display: none;
 }
 .navbar {
-    height: 100px;
-    padding-right: 50px;
-    background-color: #2F2D2E;
-    display: flex;
-    justify-content: space-between;
+  height: 100px;
+  padding-right: 50px;
+  background-color: #2f2d2e;
+  display: flex;
+  justify-content: space-between;
 }
 .navbar .nav {
-    display: flex;
-    align-items: center;
-    justify-content: flex-end;
-    gap: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 30px;
 }
 .navbar .nav a {
-    font-family: 'Viga', sans-serif;
-    color: #fff;
-    text-decoration: none;
-    font-size: 18px;
-}   
-.navbar .nav a::after {
-    content: '';
-    width: 0%;
-    height: 2px;
-    background: #fff;
-    display: block;
-    margin: auto;
-    transition: 0.5s;
+  font-family: "Viga", sans-serif;
+  color: #fff;
+  text-decoration: none;
+  font-size: 18px;
 }
-.navbar .nav a:hover::after{
-	width: 100%;
+.navbar .nav a::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #fff;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+.navbar .nav a:hover::after {
+  width: 100%;
 }
 .navbar .logo img {
-    height: 100px;
+  height: 100px;
 }
 /*INDEX*/
 
 /*INLOGGEN*/
-.col1{
+.col1 {
   display: flex;
   align-items: center;
   align-content: center;
   flex-direction: column;
-  justify-content: center;   
+  justify-content: center;
 }
 .col1 .inloggen {
   background-color: #86b94f;
@@ -92,13 +85,12 @@ Groen: #86b94f
 Achtergrond groen: #f4fff1*/
 /*FOOTER*/
 .footer {
-    background-color: #2F2D2E;
-    display: flex;
-    justify-content: space-between;
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 10rem;
+  background-color: #2f2d2e;
+  display: flex;
+  justify-content: space-between;
+  bottom: 0;
+  width: 100%;
+  height: 10rem;
 }
 .footer .contact {
   display: flex;
@@ -115,28 +107,28 @@ Achtergrond groen: #f4fff1*/
   padding-right: 50px;
 }
 .footer .contact .col1 {
-    color: #fff;
-    display: flex;
-    gap: 20px;
-    align-items: center;
-    flex-direction: column;
-    justify-content: space-evenly;
+  color: #fff;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
 }
-.footer .contact .col1 a{
-    font-family: 'Oxygen', sans-serif;  
-    color: #86b94f;
-    text-decoration: none;
-    font-size: 18px;
+.footer .contact .col1 a {
+  font-family: "Oxygen", sans-serif;
+  color: #86b94f;
+  text-decoration: none;
+  font-size: 18px;
 }
 .footer .contact .col1 a::after {
-    content: '';
-    width: 0%;
-    height: 2px;
-    background: #86b94f;
-    display: block;
-    margin: auto;
-    transition: 0.5s;
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #86b94f;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
 }
-.footer .contact .col1 a:hover::after{
-	width: 100%;
+.footer .contact .col1 a:hover::after {
+  width: 100%;
 }

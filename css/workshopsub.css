@@ -1,0 +1,59 @@
+.subImage {
+  width: 80%;
+  height: 400px;
+}
+
+.subLeft {
+  width: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  width: 50vw;
+  background-color: #fff;
+}
+.subRight {
+  width: 50vw;
+  height: 100%;
+  display: flex;
+  background-color: lightgray;
+  flex-direction: column;
+}
+
+.containerSub {
+  height: 500px;
+  background-color: red;
+  display: flex;
+  flex-direction: row;
+}
+
+.workshopH2 {
+  padding-top: 10vh;
+}
+
+.subRight * {
+  margin-left: 100px;
+}
+
+.workshopPrijs {
+  color: green;
+}
+
+.workshopH3 {
+  padding-top: 5vh;
+}
+
+.workshopInhoud {
+  max-width: 30vw;
+}
+
+.workshopButton {
+  padding: 8px 12px;
+  cursor: pointer;
+  display: inline-block;
+  background: #000;
+  border-radius: 4px;
+  width: 110px;
+  background-color: lightgreen;
+  margin-top: 20px;
+}
