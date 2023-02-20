@@ -239,24 +239,23 @@ margin-bottom: 30px;
   justify-content: space-evenly;
 }
 .contact .col1 {
-  background-color: var(--green);
+  background-color: var(--lightgray);
   border-radius: 15px;
   margin: 50px 0px;
   width: 30%;
   padding: 40px;
 }
 .contact .col1 h1 {
-  color: var(--white);
+  color: var(--black);
   text-align: center;
   padding-bottom: 30px;
 }
 .contact .col1 a {
-  color: var(--white);
+  color: var(--black);
   padding-bottom: 30px;
   text-decoration: none;
 }
 .contact .col1 a:hover {
-  
   text-decoration: none;
 }
 .contact .col2 {
@@ -273,7 +272,12 @@ margin-bottom: 30px;
 .contact .col1 h3, .contact .col2 h3 {
   color: var(--white);
 }
-.contact .col1 p, .contact .col2 p {
+.contact .col1 p{
+  color: var(--black);
+  font-size: 20px;
+  line-height: 22px;
+} 
+.contact .col2 p {
   color: var(--white);
   font-size: 20px;
   line-height: 22px;

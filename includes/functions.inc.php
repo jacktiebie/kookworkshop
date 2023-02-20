@@ -1,4 +1,14 @@
 <?php
+function emptyInputContact($naam, $email, $titel, $bericht) {
+    $result;
+    if (empty($naam) || empty($email) || empty($titel) || empty($bericht)) {
+        $result = true;     
+    }
+    else {
+        $result = false;
+    }
+    return $result;
+}
 //Deze functie checked of er registratieforum velden leeg zijn
 function emptyInputSignup($name, $email, $username, $pwd, $pwdRepeat) {
     $result;
