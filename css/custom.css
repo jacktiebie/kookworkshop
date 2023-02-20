@@ -27,6 +27,9 @@ h1 {
 h3 {
     font-family: 'Viga', sans-serif;
 }
+h2 {
+  font-family: 'Viga', sans-serif;
+}
 a {
   font-family: 'Oxygen', sans-serif;
 }
@@ -102,6 +105,11 @@ color: var(--white);
   font-size: 48px;
   line-height: 48px;
 }
+.home .blok1 .col h2 {
+  font-size: 24px;
+  line-height: 24px;
+  color: var(--green);
+}
 .home .blok1 img{
   width: 100%;
   height: 500px;
@@ -122,13 +130,13 @@ color: var(--white);
 }
 .home .blok2 .col img {
   padding-bottom: 25px;
-  height: 250px;
-  width: 250px;
+  height: 150px;
+  width: 150px;
   border: 100px;
 }
 .home .blok2 .col p {
- font-size: 32px;
- line-height: 32px;
+  font-size: 24px;
+  line-height: 24px;
  font-weight: 600;
 }
 .home .blok3 {
@@ -147,10 +155,12 @@ color: var(--white);
   font-size: 28px;
   line-height: 28px;
   padding-bottom: 25px;
+  padding-right: 100px;
 }
 .home .blok3 .col p {
   font-size: 20px;
   line-height: 22px;
+  padding-right: 100px;
 }
 .home .blok4 {
   display: flex;

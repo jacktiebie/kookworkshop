@@ -12,9 +12,6 @@
   include '../includes/db.inc.php';
   include '../includes/functions.inc.php';
   include 'navbar.php';
-  session_start();
-  $uid = $_SESSION['userid'];
-  if (isset($_SESSION["useruid"])) {
   ?>
 
     <!-- Inputfields voor de contact pagina -->
@@ -28,6 +25,9 @@
         </div>
         <div class="col2">
           <h1>Contact formulier</h1>
+          <?php
+          if (isset($_SESSION["useruid"])) {
+          ?>
           <form action="contact.php" method="POST"><br>
             <input type="text" name="titel" placeholder="Uw titel!" required><br>
             <textarea name="bericht" placeholder="Zet hier uw bericht neer!" required></textarea><br>
@@ -39,7 +39,7 @@
               $titel = $_POST["titel"];
               $bericht = $_POST["bericht"];
 
-              $stmt->bind_param("ss", $titel, $bericht);
+              $stmt->bind_param("sss", $uid, $titel, $bericht);
 
               if (emptyInputContact($uid, $titel, $bericht) !== false) {
                 header("location: contact.php?error=emptyinput");
@@ -62,21 +62,17 @@
             }
             ?>
           </form>
+          <?php
+  } else {
+  ?>
+    <h1>Log eerst in alsutblieft bruh</h1>
+  <?php
+  }
+  ?>
         </div>
       </div>
     </div>
     <!-- Footer van de pagina met contactgegevens -->
-
-  <?php
-
-
-  } else {
-  ?>
-    <p>Log eerst in alsutblieft bruh</p>
-  <?php
-  }
-
-  ?>
   <div class="bruhfooter">
     <?php
     include 'footer.php';

@@ -7,29 +7,42 @@
 </Head>
 <body>
 <!-- Navigatiebalk en databaseconnectie -->
-<?php 
-include 'navbar.php'; 
+<?php
+  include '../includes/db.inc.php';
+  include 'navbar.php';
 ?>
+
 <!-- Content van de pagina -->
 <div class="home">
   <div class="blok1">
     <div class="col">
       <h1>Kookworkshop.nl</h1>
       <p>Voor de best kookworkshop</p>
+      <?php
+        if (isset($_SESSION["useruid"])) {
+      ?>
+        <h2>U bent ingeloged op onze website!</h2>
+      <?php
+      } else {
+      ?>
+        <h1></h1>
+      <?php
+      }
+      ?>
     </div> 
   </div> 
   <div class="divider"></div> 
   <div class="blok2">
   <div class="col">
-      <img src='../foto/image.png'>
+      <img src='../foto/1920x3000px.png'>
       <p>Voor de best kookworkshop</p>
     </div> 
     <div class="col">
-      <img src='../foto/image.png'>
+      <img src='../foto/5645.png'>
       <p>Voor de best kookworkshop</p>
     </div> 
     <div class="col">
-      <img src='../foto/image.png'>
+      <img src='../foto/1535336569362360x63336000px.png'>
       <p>Voor de best kookworkshop</p>
     </div> 
   </div> 

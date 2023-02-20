@@ -20,6 +20,10 @@
 <h1>Prijzen</h1>
 <a href="workshop.php">Workshop pagina</a>
 </div>
+<div class="col1">
+<h1>Openingstijden</h1>
+<a href="#">Ma t/m Zo: 8:00 tot 19:00</a>
+</div>
 </div>
 <div class="logo">
 <a href="index.php"><img src="../foto/image-removebg-preview.png"></a>
