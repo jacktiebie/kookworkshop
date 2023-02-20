@@ -12,14 +12,11 @@ include '../includes/db.inc.php';
 include 'navbar.php'; 
 ?>
 <!-- Inputfields voor het inloggen -->
-<div class="container">
-  <div class="col1">
-    <div class="inloggen">
+  <div class="inloggen">
+    <div class="col1">
     <h1 class="titel">Inloggen</h1>
-    <form class="contactform" action="includes/login.inc.php" method="post">
-        <p>Zet je gebruikersnaam of email hier.</p> 
-        <input type="text" name="usersUid" placeholder="Gebruikersnaam/Email..."><br> 
-        <p>Zet je wachtwoord hier.</p>
+    <form action="../includes/login.inc.php" method="post">
+        <input type="text" name="usersUid" placeholder="Gebruikersnaam/Email..."><br>
         <input type="password" name="usersPwd" placeholder="Wachtwoord..."><br>
         <button type="submit" name="submit">Inloggen</button>
     </form>  
@@ -36,10 +33,11 @@ include 'navbar.php';
     ?>
 </div>
 </div>
-</div>
 <!-- Footer van de pagina met contactgegevens -->
+<div class="bruhfooter">
 <?php
 include 'footer.php'; 
 ?>
+</div>
 </body>
 </html>

@@ -4,17 +4,17 @@ if (isset($_POST["submit"])) {
     $username = $_POST["usersUid"];    
     $pwd = $_POST["usersPwd"];
 
-    require_once '../database.php';
+    require_once 'db.inc.php';
     require_once 'functions.inc.php';
 
     if (emptyInputLogin($username, $pwd) !== false) {
-        header("location: ../inloggen.php?error=emptyinput");
+        header("location: ../php/inloggen.php?error=emptyinput");
         exit();
     }
 
     loginUser($conn, $username, $pwd);
 }
 else {
-    header("location: ../inloggen.php");
+    header("location: ../php/inloggen.php");
     exit();
 }

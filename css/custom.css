@@ -12,8 +12,40 @@ html {
 
 body {
   background-color: #f4fff1;
+
+  height: 100vh;
 }
-/*ALGEMEEN*/
+body {
+  height: 100vh;
+}
+:root {
+  --white: #fff;
+  --black: #000;
+  --green: #86b94f;
+  --lightgreen: #f4fff1;
+  --darkgray: #2f2d2d;
+  --lightgray: #f0f0f0;
+}
+p {
+  font-family: "Oxygen", sans-serif;
+}
+h1 {
+  font-family: "Viga", sans-serif;
+}
+h3 {
+  font-family: "Viga", sans-serif;
+}
+a {
+  font-family: "Oxygen", sans-serif;
+}
+body {
+  background-color: var(--lightgreen);
+}
+.divider {
+  height: 30px;
+  background-color: var(--darkgray);
+}
+/*NAVBAR*/
 li::marker {
   display: none;
 }
@@ -21,6 +53,11 @@ li::marker {
   height: 100px;
   padding-right: 50px;
   background-color: #2f2d2e;
+  display: flex;
+  justify-content: space-between;
+  height: 100px;
+  padding-right: 50px;
+  background-color: var(--darkgray);
   display: flex;
   justify-content: space-between;
 }
@@ -35,6 +72,19 @@ li::marker {
   color: #fff;
   text-decoration: none;
   font-size: 18px;
+  font-family: "Viga", sans-serif;
+  color: var(--white);
+  text-decoration: none;
+  font-size: 18px;
+}
+.navbar .nav a::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: var(--white);
+  display: block;
+  margin: auto;
+  transition: 0.5s;
 }
 .navbar .nav a::after {
   content: "";
@@ -52,37 +102,251 @@ li::marker {
   height: 100px;
 }
 /*INDEX*/
-
+.home .blok1 {
+  background-image: url("../foto/image.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 500px;
+}
+.home .blok1 .col {
+  float: left;
+  width: 40%;
+  background-color: hsl(330, 2%, 18%, 0.7);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 50px;
+  color: var(--white);
+}
+.home .blok1 .col p {
+  font-size: 24px;
+  line-height: 24px;
+}
+.home .blok1 .col h1 {
+  font-size: 48px;
+  line-height: 48px;
+}
+.home .blok1 img {
+  width: 100%;
+  height: 500px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+.home .blok2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  align-content: center;
+  gap: 100px;
+}
+.home .blok2 .col {
+  padding: 50px 0px;
+  text-align: center;
+}
+.home .blok2 .col img {
+  padding-bottom: 25px;
+  height: 250px;
+  width: 250px;
+  border: 100px;
+}
+.home .blok2 .col p {
+  font-size: 32px;
+  line-height: 32px;
+  font-weight: 600;
+}
+.home .blok3 {
+  display: flex;
+  justify-content: flex-start;
+  gap: 100px;
+  flex-direction: row;
+  align-items: center;
+}
+.home .blok3 .col img {
+  background-size: cover;
+  display: block;
+  background-repeat: no-repeat;
+}
+.home .blok3 .col h1 {
+  font-size: 28px;
+  line-height: 28px;
+  padding-bottom: 25px;
+}
+.home .blok3 .col p {
+  font-size: 20px;
+  line-height: 22px;
+}
+.home .blok4 {
+  display: flex;
+  justify-content: space-between;
+  gap: 100px;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 100px;
+}
+.home .blok4 .col img {
+  background-size: cover;
+  display: block;
+  background-repeat: no-repeat;
+}
+.home .blok4 .col h1 {
+  font-size: 28px;
+  line-height: 28px;
+  padding-bottom: 25px;
+}
+.home .blok4 .col p {
+  font-size: 20px;
+  line-height: 22px;
+}
 /*INLOGGEN*/
-.col1 {
+
+.inloggen {
   display: flex;
   align-items: center;
   align-content: center;
   flex-direction: column;
   justify-content: center;
 }
-.col1 .inloggen {
-  background-color: #86b94f;
+.inloggen .col1 {
+  background-color: var(--green);
   padding: 20px 50px;
   border-radius: 15px;
-  margin-top: 50px;
+  margin: 50px 0px;
   width: 30%;
 }
-.col1 .inloggen h1 {
-  color: #fff;
+.inloggen .col1 h1 {
+  color: var(--white);
   padding: 20px;
   text-align: center;
+  padding: 20px 20px 40px 20px;
 }
-.col1 .inloggen h3 {
-  color: #fff;
+.inloggen .col1 h3 {
+  color: var(--white);
 }
-.col1 .inloggen p {
-  color: #fff;
+.inloggen .col1 p {
+  color: var(--white);
 }
-/*Font kleur: #000 & #FFF
-Grijs: #2f2d2d
-Groen: #86b94f
-Achtergrond groen: #f4fff1*/
+.inloggen .col1 form {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  color: var(--black);
+  gap: 10px;
+}
+.inloggen .col1 input {
+  width: 80%;
+  color: (var(--black));
+  font-size: 18px;
+  text-align: center;
+  padding: 5px 0px;
+}
+.inloggen .col1 button {
+  background-color: var(--white);
+  color: var(--black);
+  font-weight: 600;
+  padding: 5px 40px;
+  font-size: 18px;
+  border: solid 1px var(--white);
+  margin-bottom: 30px;
+}
+.inloggen .col1 button:hover {
+  border: solid 1px var(--green);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+/*CONTACT*/
+.contact {
+  display: flex;
+  align-items: center;
+  align-content: center;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.contact .col1 {
+  background-color: var(--lightgray);
+  border-radius: 15px;
+  margin: 50px 0px;
+  width: 30%;
+  padding: 40px;
+}
+.contact .col1 h1 {
+  color: var(--black);
+  text-align: center;
+  padding-bottom: 30px;
+}
+.contact .col1 a {
+  color: var(--black);
+  padding-bottom: 30px;
+  text-decoration: none;
+}
+.contact .col1 a:hover {
+  text-decoration: none;
+}
+.contact .col2 {
+  width: 50%;
+  background-color: var(--green);
+  border-radius: 15px;
+  margin: 50px 0px;
+}
+.contact .col2 h1 {
+  color: var(--white);
+  text-align: center;
+  padding-top: 40px;
+}
+.contact .col1 h3,
+.contact .col2 h3 {
+  color: var(--white);
+}
+.contact .col1 p {
+  color: var(--black);
+  font-size: 20px;
+  line-height: 22px;
+}
+.contact .col2 p {
+  color: var(--white);
+  font-size: 20px;
+  line-height: 22px;
+}
+.contact .col2 form {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  align-items: center;
+  color: var(--black);
+  gap: 10px;
+}
+.contact .col2 input {
+  width: 70%;
+  color: var(--black);
+  font-size: 18px;
+  text-align: center;
+  padding: 5px 0px;
+}
+.contact .col2 textarea {
+  width: 70%;
+  color: var(--black);
+  font-size: 18px;
+  text-align: center;
+  padding: 5px 0px;
+  font-family: "Oxygen", sans-serif;
+}
+.contact .col2 button {
+  background-color: var(--white);
+  color: var(--black);
+  font-weight: 600;
+  padding: 5px 40px;
+  font-size: 18px;
+  border: solid 1px var(--white);
+  margin-bottom: 30px;
+}
+.contact .col2 button:hover {
+  border: solid 1px var(--green);
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
 /*FOOTER*/
 .footer {
   background-color: #2f2d2e;
@@ -91,15 +355,20 @@ Achtergrond groen: #f4fff1*/
   bottom: 0;
   width: 100%;
   height: 10rem;
+  background-color: var(--darkgray);
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  height: 10rem;
 }
-.footer .contact {
+.footer .footercontact {
   display: flex;
   align-items: flex-start;
   gap: 50px;
   padding: 40px 0px 0px 50px;
 }
 .footer .logo {
-  color: #fff;
+  color: var(--white);
   display: flex;
   justify-content: center;
   flex-direction: column;
@@ -128,6 +397,37 @@ Achtergrond groen: #f4fff1*/
   display: block;
   margin: auto;
   transition: 0.5s;
+}
+.footer .contact .col1 a:hover::after {
+  width: 100%;
+}
+.footer .footercontact .col1 {
+  color: var(--white);
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.footer .footercontact .col1 a {
+  font-family: "Oxygen", sans-serif;
+  color: var(--green);
+  text-decoration: none;
+  font-size: 18px;
+}
+.footer .footercontact .col1 a::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: var(--green);
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+}
+.bruhfooter {
+  position: absolute;
+  width: 100%;
+  bottom: 0;
 }
 .footer .contact .col1 a:hover::after {
   width: 100%;
