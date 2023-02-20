@@ -23,39 +23,38 @@ include 'navbar.php';
 <div class="col2">
   <h1>Contact formulier</h1>
 <form  action="contact.php" method="POST"><br>
-    <input type="text" name="naam" placeholder="Uw naam!" required><br>
-    <input type="text" name="email" placeholder="Uw E-mail!" required><br>
     <input type="text" name="titel" placeholder="Uw titel!" required><br>
     <textarea name="bericht" placeholder="Zet hier uw bericht neer!" required></textarea><br>
   <button type="submit" name="submit" >Verzenden</button>
   <?php
-    $stmt = $conn->prepare("INSERT INTO contact (ID, naam, email, titel, bericht) VALUES (null, ?, ?, ?, ?)");
+    $stmt = $conn->prepare("INSERT INTO contact (ID, usersId, titel, bericht) VALUES (null, ?, ?, ?)");
   
-    if (isset($_POST["naam"])) {
-        $naam = $_POST["naam"];
-        $email = $_POST['email'];
+    if (isset($_POST["submit"])) {
+        $uid = $_POST["usersId"];
         $titel = $_POST["titel"];
         $bericht = $_POST["bericht"];
   
-        $stmt->bind_param("ssss", $naam, $email, $titel, $bericht);
+        $stmt->bind_param("ss", $titel, $bericht);
 
-        if (emptyInputContact($naam, $email, $titel, $bericht) !== false) {
+        if (emptyInputContact($titel, $bericht) !== false) {
           header("location: contact.php?error=emptyinput");
           exit();
         }
-  
+
+        createContact($conn, $titel, $bericht);
+
         $stmt->execute();
         header("Location: contact.php");
     }
     if (isset($_GET["error"])) {
       if ($_GET["error"] == "emptyinput") {
-          echo "<p class='Fout'>Vul al de velden in!</p>";    
+          echo "<p class='errormassage'>Vul al de velden in!</p>";    
       }
       else if ($_GET["error"] == "stmtfailed") {
-          echo "<p class='Fout'>Er ging iets verkeerd, probeer opnieuw!</p>";
+          echo "<p class='errormassage'>Er ging iets verkeerd, probeer opnieuw!</p>";
       }
       else if ($_GET["error"] == "none") {
-          echo "<p class='Fout'>Uw bericht is verzonden!</p>";
+          echo "<p class='errormassage'>Uw bericht is verzonden!</p>";
       }
     }
   ?>

@@ -8,7 +8,6 @@
 <body>
 <!-- Navigatiebalk en databaseconnectie -->
 <?php 
-/*include 'test.php';*/
 include 'navbar.php'; 
 ?>
 <!-- Content van de pagina -->

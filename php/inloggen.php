@@ -24,10 +24,10 @@ include 'navbar.php';
     <?php
         if (isset($_GET["error"])) {
           if ($_GET["error"] == "emptyinput") {
-              echo "<p class='Fout'>Vul al de velden in!</p>";    
+              echo "<p class='errormassage'>Vul al de velden in!</p>";    
           }
           else if ($_GET["error"] == "wronglogin") {
-              echo "<p class='Fout'>Verkeerde gebruikersnaam/wachtwoord!</p>";
+              echo "<p class='errormassage'>Verkeerde gebruikersnaam/wachtwoord!</p>";
           }
         }
     ?>

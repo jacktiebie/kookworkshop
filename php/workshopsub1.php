@@ -36,12 +36,11 @@
 
 
     <!-- Footer van de pagina met contactgegevens -->
-    <footer>
-        <?php
-        include 'footer.php'
-        ?>
-
-    </footer>
+    <div class="bruhfooter">
+<?php
+include 'footer.php'; 
+?>
+</div>
 </body>
 
 </html>

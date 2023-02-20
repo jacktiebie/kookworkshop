@@ -9,16 +9,15 @@ function emptyInputContact($naam, $email, $titel, $bericht) {
     }
     return $result;
 }
-function createUser($conn, $naam, $email, $titel, $bericht) {
-    $sql = "INSERT INTO users (naam, email, titel, bericht) VALUES (?, ?, ?, ?);";
+function createContact($conn, $naam, $email, $titel, $bericht) {
+    $sql = "INSERT INTO contact (naam, email, titel, bericht) VALUES (?, ?, ?, ?);";
     $stmt = mysqli_stmt_init($conn); 
     if (!mysqli_stmt_prepare($stmt, $sql)) {
         header("location: contact.php?error=stmtfailed");
         exit(); 
     }
-
-
-    mysqli_stmt_bind_param($stmt, "ssss", $name, $email, $username, $pwdHashed);
+    
+    mysqli_stmt_bind_param($stmt, "ssss", $naam, $email, $titel, $bericht);
     mysqli_stmt_execute($stmt);
     mysqli_stmt_close($stmt);
     header("location: contact.php?error=none");

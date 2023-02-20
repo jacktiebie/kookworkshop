@@ -1,19 +1,11 @@
 @import url(https://fonts.googleapis.com/css2?family=Oxygen:wght@400;700&family=Viga&display=swap);
 /*ALGEMEEN*/
 * {
-  padding: 0;
-  margin: 0;
-  font-family: "Oxygen", sans-serif;
+    padding: 0;
+    margin: 0;
 }
 html {
-  width: 100vw;
-  height: 100vh;
-}
-
-body {
-  background-color: #f4fff1;
-
-  height: 100vh;
+    height: 100vh;
 }
 body {
   height: 100vh;
@@ -27,19 +19,19 @@ body {
   --lightgray: #f0f0f0;
 }
 p {
-  font-family: "Oxygen", sans-serif;
+    font-family: 'Oxygen', sans-serif;
 }
 h1 {
-  font-family: "Viga", sans-serif;
+    font-family: 'Viga', sans-serif;
 }
 h3 {
-  font-family: "Viga", sans-serif;
+    font-family: 'Viga', sans-serif;
 }
 a {
-  font-family: "Oxygen", sans-serif;
+  font-family: 'Oxygen', sans-serif;
 }
 body {
-  background-color: var(--lightgreen);
+    background-color: var(--lightgreen);
 }
 .divider {
   height: 30px;
@@ -47,78 +39,60 @@ body {
 }
 /*NAVBAR*/
 li::marker {
-  display: none;
+    display: none;
 }
 .navbar {
-  height: 100px;
-  padding-right: 50px;
-  background-color: #2f2d2e;
-  display: flex;
-  justify-content: space-between;
-  height: 100px;
-  padding-right: 50px;
-  background-color: var(--darkgray);
-  display: flex;
-  justify-content: space-between;
+    height: 100px;
+    padding-right: 50px;
+    background-color: var(--darkgray);
+    display: flex;
+    justify-content: space-between;
 }
 .navbar .nav {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 30px;
 }
 .navbar .nav a {
-  font-family: "Viga", sans-serif;
-  color: #fff;
-  text-decoration: none;
-  font-size: 18px;
-  font-family: "Viga", sans-serif;
-  color: var(--white);
-  text-decoration: none;
-  font-size: 18px;
-}
+    font-family: 'Viga', sans-serif;
+    color: var(--white);
+    text-decoration: none;
+    font-size: 18px;
+}   
 .navbar .nav a::after {
-  content: "";
-  width: 0%;
-  height: 2px;
-  background: var(--white);
-  display: block;
-  margin: auto;
-  transition: 0.5s;
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: var(--white);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
 }
-.navbar .nav a::after {
-  content: "";
-  width: 0%;
-  height: 2px;
-  background: #fff;
-  display: block;
-  margin: auto;
-  transition: 0.5s;
-}
-.navbar .nav a:hover::after {
-  width: 100%;
+.navbar .nav a:hover::after{
+	width: 100%;
 }
 .navbar .logo img {
-  height: 100px;
+    height: 100px;
 }
 /*INDEX*/
 .home .blok1 {
-  background-image: url("../foto/image.png");
-  background-size: cover;
-  background-repeat: no-repeat;
-  height: 500px;
+background-image: url('../foto/image.png');
+background-size: cover;
+background-repeat: no-repeat;
+height: 500px;
 }
 .home .blok1 .col {
-  float: left;
-  width: 40%;
-  background-color: hsl(330, 2%, 18%, 0.7);
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 50px;
-  color: var(--white);
+float: left;
+width: 40%;
+background-color: hsl(330, 2%, 18%, 0.7);
+height: 100%;
+display: flex;
+flex-direction: column;
+align-items: center;
+justify-content: center;
+gap: 50px;
+color: var(--white);
 }
 .home .blok1 .col p {
   font-size: 24px;
@@ -128,7 +102,7 @@ li::marker {
   font-size: 48px;
   line-height: 48px;
 }
-.home .blok1 img {
+.home .blok1 img{
   width: 100%;
   height: 500px;
   background-size: cover;
@@ -153,9 +127,9 @@ li::marker {
   border: 100px;
 }
 .home .blok2 .col p {
-  font-size: 32px;
-  line-height: 32px;
-  font-weight: 600;
+ font-size: 32px;
+ line-height: 32px;
+ font-weight: 600;
 }
 .home .blok3 {
   display: flex;
@@ -201,13 +175,12 @@ li::marker {
   line-height: 22px;
 }
 /*INLOGGEN*/
-
 .inloggen {
   display: flex;
   align-items: center;
   align-content: center;
   flex-direction: column;
-  justify-content: center;
+  justify-content: center;   
 }
 .inloggen .col1 {
   background-color: var(--green);
@@ -238,22 +211,22 @@ li::marker {
   gap: 10px;
 }
 .inloggen .col1 input {
-  width: 80%;
-  color: (var(--black));
-  font-size: 18px;
-  text-align: center;
-  padding: 5px 0px;
+ width: 80%;
+ color: (var(--black));
+ font-size: 18px;
+ text-align: center;
+ padding: 5px 0px;
 }
 .inloggen .col1 button {
-  background-color: var(--white);
-  color: var(--black);
-  font-weight: 600;
-  padding: 5px 40px;
-  font-size: 18px;
-  border: solid 1px var(--white);
-  margin-bottom: 30px;
+background-color: var(--white);
+color: var(--black);
+font-weight: 600;
+padding: 5px 40px;
+font-size: 18px;
+border: solid 1px var(--white);
+margin-bottom: 30px;
 }
-.inloggen .col1 button:hover {
+.inloggen .col1  button:hover {
   border: solid 1px var(--green);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
@@ -296,15 +269,14 @@ li::marker {
   text-align: center;
   padding-top: 40px;
 }
-.contact .col1 h3,
-.contact .col2 h3 {
+.contact .col1 h3, .contact .col2 h3 {
   color: var(--white);
 }
-.contact .col1 p {
+.contact .col1 p{
   color: var(--black);
   font-size: 20px;
   line-height: 22px;
-}
+} 
 .contact .col2 p {
   color: var(--white);
   font-size: 20px;
@@ -320,11 +292,11 @@ li::marker {
   gap: 10px;
 }
 .contact .col2 input {
-  width: 70%;
-  color: var(--black);
-  font-size: 18px;
-  text-align: center;
-  padding: 5px 0px;
+ width: 70%;
+ color: var(--black);
+ font-size: 18px;
+ text-align: center;
+ padding: 5px 0px;
 }
 .contact .col2 textarea {
   width: 70%;
@@ -332,34 +304,28 @@ li::marker {
   font-size: 18px;
   text-align: center;
   padding: 5px 0px;
-  font-family: "Oxygen", sans-serif;
-}
+  font-family: 'Oxygen', sans-serif;
+ }
 .contact .col2 button {
-  background-color: var(--white);
-  color: var(--black);
-  font-weight: 600;
-  padding: 5px 40px;
-  font-size: 18px;
-  border: solid 1px var(--white);
-  margin-bottom: 30px;
+background-color: var(--white);
+color: var(--black);
+font-weight: 600;
+padding: 5px 40px;
+font-size: 18px;
+border: solid 1px var(--white);
+margin-bottom: 30px;
 }
-.contact .col2 button:hover {
+.contact .col2  button:hover {
   border: solid 1px var(--green);
   box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 /*FOOTER*/
 .footer {
-  background-color: #2f2d2e;
-  display: flex;
-  justify-content: space-between;
-  bottom: 0;
-  width: 100%;
-  height: 10rem;
-  background-color: var(--darkgray);
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  height: 10rem;
+    background-color: var(--darkgray);
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    height: 10rem;
 }
 .footer .footercontact {
   display: flex;
@@ -375,60 +341,34 @@ li::marker {
   align-items: flex-end;
   padding-right: 50px;
 }
-.footer .contact .col1 {
-  color: #fff;
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  flex-direction: column;
-  justify-content: space-evenly;
-}
-.footer .contact .col1 a {
-  font-family: "Oxygen", sans-serif;
-  color: #86b94f;
-  text-decoration: none;
-  font-size: 18px;
-}
-.footer .contact .col1 a::after {
-  content: "";
-  width: 0%;
-  height: 2px;
-  background: #86b94f;
-  display: block;
-  margin: auto;
-  transition: 0.5s;
-}
-.footer .contact .col1 a:hover::after {
-  width: 100%;
-}
 .footer .footercontact .col1 {
-  color: var(--white);
-  display: flex;
-  gap: 20px;
-  align-items: center;
-  flex-direction: column;
-  justify-content: space-evenly;
+    color: var(--white);
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
 }
-.footer .footercontact .col1 a {
-  font-family: "Oxygen", sans-serif;
-  color: var(--green);
-  text-decoration: none;
-  font-size: 18px;
+.footer .footercontact .col1 a{
+    font-family: 'Oxygen', sans-serif;  
+    color: var(--green);
+    text-decoration: none;
+    font-size: 18px;
 }
 .footer .footercontact .col1 a::after {
-  content: "";
-  width: 0%;
-  height: 2px;
-  background: var(--green);
-  display: block;
-  margin: auto;
-  transition: 0.5s;
+    content: '';
+    width: 0%;
+    height: 2px;
+    background: var(--green);
+    display: block;
+    margin: auto;
+    transition: 0.5s;
 }
 .bruhfooter {
   position: absolute;
   width: 100%;
   bottom: 0;
 }
-.footer .contact .col1 a:hover::after {
-  width: 100%;
+.footer .contact .col1 a:hover::after{
+	width: 100%;
 }

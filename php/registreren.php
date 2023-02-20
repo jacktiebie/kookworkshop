@@ -27,25 +27,25 @@ include 'navbar.php';
 <?php
     if (isset($_GET["error"])) {
       if ($_GET["error"] == "emptyinput") {
-          echo "<p class='Fout'>Vul al de velden in!</p>";    
+          echo "<p class='errormassage'>Vul al de velden in!</p>";    
       }
       else if ($_GET["error"] == "invaliduid") {
-          echo "<p class='Fout'>Gebruik een goede naam!</p>";
+          echo "<p class='errormassage'>Gebruik een goede naam!</p>";
       }
       else if ($_GET["error"] == "invalidemail") {
-          echo "<p class='Fout'>Gebruik een goed E-mail!</p>";
+          echo "<p class='errormassage'>Gebruik een goed E-mail!</p>";
       }
       else if ($_GET["error"] == "nomatchfound") {
-          echo "<p class='Fout'>Wachtwoorden zijn niet gelijk!</p>";
+          echo "<p class='errormassage'>Wachtwoorden zijn niet gelijk!</p>";
       }
       else if ($_GET["error"] == "usernametaken") {
-          echo "<p class='Fout'>Gebruikersnaam is al in beslag!</p>";
+          echo "<p class='errormassage'>Gebruikersnaam is al in beslag!</p>";
       }
       else if ($_GET["error"] == "stmtfailed") {
-          echo "<p class='Fout'>Er ging iets verkeerd, probeer opnieuw!</p>";
+          echo "<p class='errormassage'>Er ging iets verkeerd, probeer opnieuw!</p>";
       }
       else if ($_GET["error"] == "none") {
-          echo "<p class='Fout'>Je bent geregistreerd!</p>";
+          echo "<p class='errormassage'>Je bent geregistreerd!</p>";
       }
     }
 ?>

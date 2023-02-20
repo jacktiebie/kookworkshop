@@ -8,7 +8,8 @@
 <body>
 <!-- Navigatiebalk en databaseconnectie -->
 <?php 
-include 'database.php';
+include '../includes/db.inc.php';
+include 'navbar.php'; 
 ?>
 
 <div class="container">
@@ -41,8 +42,8 @@ include 'database.php';
 </div>
 </div>
 <!-- Footer van de pagina met contactgegevens -->
-<footer>
-
-</footer>
+<?php
+include 'footer.php'; 
+?>
 </body>
 </html>
