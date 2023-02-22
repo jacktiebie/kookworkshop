@@ -31,21 +31,38 @@
       ?>
     </div> 
   </div> 
-  <div class="divider"></div> 
-  <div class="blok2">
-  <div class="col">
-      <img src='../foto/1920x3000px.png'>
-      <p>Voor de best kookworkshop</p>
-    </div> 
+
+
+
+<?php
+  $sql ="SELECT * FROM users WHERE usersRoles = 'admin';";
+  $result = mysqli_query($conn, $sql);
+  $row = mysqli_fetch_array($result);
+  $value = $row; 
+  if ($row === $value) {
+    echo '<div class="divider"></div> 
+    <div class="blok2">
     <div class="col">
-      <img src='../foto/5645.png'>
-      <p>Voor de best kookworkshop</p>
-    </div> 
-    <div class="col">
-      <img src='../foto/1535336569362360x63336000px.png'>
-      <p>Voor de best kookworkshop</p>
-    </div> 
-  </div> 
+        <img src="../foto/1920x3000px.png">
+        <p>Voor de best kookworkshop</p>
+      </div> 
+      <div class="col">
+        <img src="../foto/5645.png">
+        <p>Voor de best kookworkshop</p>
+      </div> 
+      <div class="col">
+        <img src="../foto/1535336569362360x63336000px.png">
+        <p>Voor de best kookworkshop</p>
+      </div> 
+    </div>';
+  }
+  else {
+      echo "failed";
+  }     
+?>
+
+
+
   <div class="divider"></div> 
   <div class="blok3">
   <div class="col">
