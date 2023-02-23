@@ -20,7 +20,6 @@
       <h1>Kookworkshop.nl</h1>
       <p>Voor de best kookworkshop</p>
       <?php
-        
         if (isset($_SESSION["useruid"])) {
         $useruid = $_SESSION["useruid"]; 
       ?>
@@ -38,15 +37,15 @@
 
 
 <?php
- $sql = "SELECT usersRoles FROM users WHERE usersUid= '$useruid'";
- $result = mysqli_query($conn, $sql);
- $row = mysqli_fetch_array($result);
- echo $row['usersRoles'];
+$sql = "SELECT usersRoles FROM users WHERE usersUid= '$useruid'";
+$result = mysqli_query($conn, $sql);
+$row = mysqli_fetch_array($result);
+echo $row['usersRoles'];
 
- $klant = 'klant';
- $barman = 'barman';
- $gastheer = 'gastheer';
- $admin = 'admin';
+$klant = 'klant';
+$barman = 'barman';
+$gastheer = 'gastheer';
+$admin = 'admin';
 
   if ($row['usersRoles'] == $klant) {
     echo '<div class="divider"></div> 
