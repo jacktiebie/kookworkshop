@@ -1,22 +1,37 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="utf-8">
-        <title>Contact Form</title>
+    <link rel="stylesheet" href="../css/custom.css">
+    <link rel="stylesheet" href="../css/reservations.css">
     </head>
-    <body>
-        <main>
-            <p>Send e-mail</p>
-            <form action="contactform.php" method="post">
-                <input type="date" name="date" placeholder="Datum afspraak">
-                <input type="text" name="ws" placeholder="Workshop" list="workshops">
-                <button type="submit" name="submit">Reserveer</button>
 
-                <input type="radio" id="time1" name="age" value="30">
-                <label for="time1">09:00 - 13:00</label><br>
-                <input type="radio" id="time2" name="age" value="60">
-                <label for="time2">14:00 - 18:00</label><br>  
-                  <input type="submit" value="Submit">
+    <body>
+        <?php include 'navbar.php'?>
+        <div class="container">
+            <div class="topdiv">
+                <b><h1 class="white">Reserveren</h1></b>
+            </div>
+
+
+            <div class="middiv">
+            <form action="../includes/reserve.inc.php" method="post">
+                <p>Datum: </p>
+                <input type="date" name="date" placeholder="Datum afspraak"><br><br>
+                <p>Voornaam: </p>
+                <input type="text" name="firstName" placeholder="Naam"><br><br>
+                <p>Achternaam: </p>
+                <input type="text" name="lastName" placeholder="Datum afspraak"><br><br>
+                <p>Telefoon nummer: </p>
+                <input type="text" name="phone" placeholder="Telefoon"><br><br>
+                <p>Workshop keuze: </p>
+                <input type="text" name="ws" placeholder="Workshop" list="workshops">
+                <br><br>
+                <p>Hoeveelheid mensen </p>
+                <input type="number" name="Personen" placeholder="Personen" list="workshops">
+                <br><br>
+<p>Tijd:</p>
+
+<input type="submit" value="Submit">
 
                 <datalist id="workshops">
                   <option value="Indonesische rijsttafel">
@@ -26,6 +41,11 @@
                   <option value="Bourgondische keuken">
                 </datalist>
             </form>
-        </main>
+
+            </div>
+
+        </div>
+        <?php include 'footer.php'?>
     </body>
+
 </html>

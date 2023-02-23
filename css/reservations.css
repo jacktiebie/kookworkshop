@@ -1,0 +1,39 @@
+.container{
+    background-color: #FFF;
+    height: 80%;
+    padding: 4vh;
+}
+.topdiv {
+    background-color: #86b94f;
+    height: fit-content;
+    width: 98%;
+    padding: 1%;
+    border-radius: 10px;
+}
+.middiv {
+    margin-top: 3vh;
+    background-color: #f0f0f0   ;
+    height: 45vh;
+    width: 98%;
+    padding: 1%;
+    border-radius: 10px;
+    display: flex;
+}
+.reservation {
+    background-color: white;
+    width: 23%;
+    height: 43vh;
+    margin-right: 2%;
+    padding: 1vh;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+}
+.white {
+    color: #FFF;
+}
+.reservebut {
+    background-color: #86b94f;
+    padding: 5px;
+    color: #FFF;
+}
