@@ -10,6 +10,7 @@
 <?php
   include '../includes/db.inc.php';
   include 'navbar.php';
+  include '../includes/functions.inc.php';
 ?>
 
 <!-- Content van de pagina -->
@@ -19,7 +20,9 @@
       <h1>Kookworkshop.nl</h1>
       <p>Voor de best kookworkshop</p>
       <?php
+        
         if (isset($_SESSION["useruid"])) {
+        $useruid = $_SESSION["useruid"]; 
       ?>
         <h2>U bent ingeloged op onze website!</h2>
       <?php
@@ -35,11 +38,17 @@
 
 
 <?php
-  $sql ="SELECT * FROM users WHERE usersRoles = 'admin';";
-  $result = mysqli_query($conn, $sql);
-  $row = mysqli_fetch_array($result);
-  $value = $row; 
-  if ($row === $value) {
+ $sql = "SELECT usersRoles FROM users WHERE usersUid= '$useruid'";
+ $result = mysqli_query($conn, $sql);
+ $row = mysqli_fetch_array($result);
+ echo $row['usersRoles'];
+
+ $klant = 'klant';
+ $barman = 'barman';
+ $gastheer = 'gastheer';
+ $admin = 'admin';
+
+  if ($row['usersRoles'] == "klant") {
     echo '<div class="divider"></div> 
     <div class="blok2">
     <div class="col">
@@ -56,9 +65,32 @@
       </div> 
     </div>';
   }
+  else if ($row === $barman) {
+    echo '<div class="divider"></div> 
+    <div class="blok2">
+    <div class="col">
+        <img src="../foto/1920x3000px.png">
+        <p>Voor de best kookworkshop</p>
+      </div> 
+      <div class="col">
+        <img src="../foto/5645.png">
+        <p>Voor de best kookworkshop</p>
+      </div> 
+      <div class="col">
+        <img src="../foto/1535336569362360x63336000px.png">
+        <p>Voor de best kookworkshop</p>
+      </div> 
+    </div>';
+  }
+  else if ($row === $gastheer) {
+    echo '';
+  }
+  else if ($row === $admin) {
+    echo '';
+  }
   else {
       echo "failed";
-  }     
+  }    
 ?>
 
 
