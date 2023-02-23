@@ -48,7 +48,7 @@
  $gastheer = 'gastheer';
  $admin = 'admin';
 
-  if ($row['usersRoles'] == "klant") {
+  if ($row['usersRoles'] == $klant) {
     echo '<div class="divider"></div> 
     <div class="blok2">
     <div class="col">
@@ -65,7 +65,7 @@
       </div> 
     </div>';
   }
-  else if ($row === $barman) {
+  else if ($row['usersRoles'] == $barman) {
     echo '<div class="divider"></div> 
     <div class="blok2">
     <div class="col">
@@ -82,10 +82,10 @@
       </div> 
     </div>';
   }
-  else if ($row === $gastheer) {
+  else if ($row['usersRoles'] == $gastheer) {
     echo '';
   }
-  else if ($row === $admin) {
+  else if ($row['usersRoles'] == $admin) {
     echo '';
   }
   else {
