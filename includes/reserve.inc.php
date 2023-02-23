@@ -1,33 +1,31 @@
 <?php
+
 include 'db.inc.php';
+$id = null;
+$first_name = $_REQUEST['firstName'];
+$last_name = $_REQUEST['lastName'];
+$gender = $_REQUEST['email'];
+$address = $_REQUEST['phone'];
+$email = $_REQUEST['date'];
+$ws = $_REQUEST['ws'];
+$persons = $_REQUEST['persons'];
 
-if(isset($_post['submit'])){
-    if(!empty($_post['firstName']) && !empty($_post['lastName']) && !empty($_post['email']) && !empty($_post['phone']) && !empty($_post['date']) && !empty($_post['ws']) && !empty($_post['persons'])){
+// We are going to insert the data into our sampleDB table
+$sql = "INSERT INTO reserveform VALUES ('$id','$first_name',
+            '$last_name','$gender','$address','$email','$ws','$persons')";
 
-        $firstName = $_POST['firstName'];
-        $lastName = $_POST['lastName'];
-        $email = $_POST['email'];
-        $phone = $_POST['phone'];
-        $date = $_POST['date'];
-        $ws = $_POST['ws'];
-        $persons = $_POST['persons'];
-        print $firstName;
-        $query = "INSERT INTO reserve-form(firstName,lastName,email,phone,date,ws,persons) values('$firstName' , '$lastName' , '$email' , '$phone' , '$date' , '$ws' , '$persons')";
-        $run = mysqli_query($conn,$query) or die(mysqli_error());
+// Check if the query is successful
+if (mysqli_query($conn, $sql)) {
+    echo "<h3>data stored in a database successfully."
+        . " Please browse your localhost php my admin"
+        . " to view the updated data</h3>";
 
-        if($run){
-            echo " Reservering gemaakt";
-        }
-        else {
-            echo "unsuccesfull";
-        }
-
-    }
-else{
-    echo "Vul alles in...";
-    }
+    echo nl2br("\n$first_name\n $last_name\n "
+        . "$gender\n $address\n $email");
+} else {
+    echo "ERROR: Hush! Sorry $sql. "
+        . mysqli_error($conn);
 }
 
-
-
-?>
+// Close connection
+mysqli_close($conn);

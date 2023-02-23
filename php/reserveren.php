@@ -1,69 +1,65 @@
 <!DOCTYPE html>
 <html>
-    <head>
+
+<head>
     <link rel="stylesheet" href="../css/custom.css">
     <link rel="stylesheet" href="../css/reservations.css">
-    </head>
+</head>
 
-    <body>
-        <?php include 'navbar.php'?>
-        <div class="container">
-            <div class="topdiv">
-                <b><h1 class="white">Reserveren</h1></b>
-            </div>
-
-
-            <div class="middiv">
-            <form method="post">
-                <p>Datum: </p>
-                <input type="date" name="date" placeholder="Datum afspraak"><br><br>
-                <p>Voornaam: </p>
-                <input type="text" name="firstName" placeholder="Naam"><br><br>
-                <p>Achternaam: </p>
-                <input type="text" name="lastName" placeholder="Achternaam"><br><br>
-                <p>Telefoon nummer: </p>
-                <input type="text" name="phone" placeholder="Telefoon"><br><br>
-                <p>Email: </p>
-                <input type="text" name="email" placeholder="Email"><br><br>
-                <p>Workshop keuze: </p>
-                <input type="text" name="ws" placeholder="Workshop" list="workshops">
-                <br><br>
-                <p>Hoeveelheid mensen </p>
-                <input type="number" name="persons" placeholder="Personen" list="workshops">
-                <br><br>
-<p>Tijd:</p>
-
-                <datalist id="workshops">
-                  <option value="Indonesische rijsttafel">
-                  <option value="Paella">
-                  <option value="Sushi">
-                  <option value="Mexicaanse mix">
-                  <option value="Bourgondische keuken">
-                </datalist>
-                <input type="submit" value="Submit">
-                
-<?php
-    $stmt = $conn->prepare("INSERT INTO reserve-form (id, firstName, email, phone, ws, lastName, date, persons) VALUES (null, ?, ?, ?, ?, ?, ?, ?)");
-    if (isset($_POST["firstName"])) {
-        $firstName = $_POST['firstName'];
-        $lastName = $_POST['lastName'];
-        $email = $_POST['email'];
-        $phone = $_POST['phone'];
-        $date = $_POST['date'];
-        $ws = $_POST['ws'];
-        $persons = $_POST['persons'];
-
-      $stmt->bind_param("sssssii", $firstName, $email, $phone, $ws, $lastName, $date, $persons);
-      $stmt->execute();
-      header("Location: contactpagina.php");
-    }
-  ?>
-            </form>
-
-            </div>
-
+<body>
+    <?php include 'navbar.php' ?>
+    <div class="container">
+        <div class="topdiv">
+            <b>
+                <h1 class="white">Reserveren</h1>
+            </b>
         </div>
-        <?php include 'footer.php'?>
-    </body>
+
+
+        <div class="middiv">
+            <datalist id="workshops">
+                <option value="Indonesische rijsttafel">
+                <option value="Paella">
+                <option value="Sushi">
+                <option value="Mexicaanse mix">
+                <option value="Bourgondische keuken">
+            </datalist>
+            </form>
+            <form action="../includes/reserve.inc.php" method="post">
+                <p>
+                    <label for="firstName">First Name:</label>
+                    <input type="text" name="firstName" id="firstName">
+                </p>
+                <p>
+                    <label for="lastName">Last Name:</label>
+                    <input type="text" name="lastName" id="lastName">
+                </p>
+                <p>
+                    <label for="Email">Email:</label>
+                    <input type="text" name="email" id="Email">
+                </p>
+                <p>
+                    <label for="Address">Phone:</label>
+                    <input type="text" name="phone" id="Address">
+                </p>
+                <p>
+                    <label for="Date">Date:</label>
+                    <input type="date" name="date" id="Date">
+                </p>
+                <p>
+                    <label for="Ws">Workshops:</label>
+                    <input type="text" name="ws" id="Ws" list="workshops">
+                </p>
+                <p>
+                    <label for="Persons">Persons:</label>
+                    <input type="number" name="persons" id="Persons">
+                </p>
+                <input type="submit" value="Submit">
+            </form>
+        </div>
+
+    </div>
+    <?php include 'footer.php' ?>
+</body>
 
 </html>
