@@ -1,6 +1,8 @@
 <?php
+include 'db.inc.php';
+
 if(isset($_post['submit'])){
-    if(!empty($_post['firstName']) && !empty($_post['lastName']) && !empty($_post['email']) && !empty($_post['phone']) && !empty($_post['date']) && !empty($_post['ws'])){
+    if(!empty($_post['firstName']) && !empty($_post['lastName']) && !empty($_post['email']) && !empty($_post['phone']) && !empty($_post['date']) && !empty($_post['ws']) && !empty($_post['persons'])){
 
         $firstName = $_POST['firstName'];
         $lastName = $_POST['lastName'];
@@ -8,8 +10,9 @@ if(isset($_post['submit'])){
         $phone = $_POST['phone'];
         $date = $_POST['date'];
         $ws = $_POST['ws'];
+        $persons = $_POST['persons'];
         print $firstName;
-        $query = "insert into reserve-form(firstName,lastName,email,phone,date,ws) values('$firstName' , '$lastName' , '$email' , '$phone' , '$date' , '$ws')";
+        $query = "INSERT INTO reserve-form(firstName,lastName,email,phone,date,ws,persons) values('$firstName' , '$lastName' , '$email' , '$phone' , '$date' , '$ws' , '$persons')";
         $run = mysqli_query($conn,$query) or die(mysqli_error());
 
         if($run){
