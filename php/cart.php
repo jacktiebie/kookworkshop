@@ -10,7 +10,6 @@
 <?php
 include '../includes/db.inc.php';
 include 'navbar.php';
-SESSION_START();
 if (!(isset($_SESSION['cart']))) {
     $_SESSION['cart'] = array();
 } //if cart
@@ -83,27 +82,6 @@ if (isset($_GET['pID'])) {
 
     <h4>Personal Details</h4>
     <form action="includes/checkout.inc.php" method="get">
-        <label for="address">Address</label>
-        <input type="textarea" name="address">
-
-        <label for="city">City</label>
-        <input type="text" name="city">
-
-        <label for="postal_code">Postal Code</label>
-        <input type="textarea" name="postal_code">
-
-        <label for="country">Country</label>
-        <input name="country" list="countries">
-
-        <datalist id="countries">
-            <option value="Netherlands">
-            <option value="England">
-            <option value="Germany">
-            <option value="France">
-            <option value="South Africa">
-        </datalist>
-
-
         <input type="submit" value="Check Out">
     </form>
 </body>

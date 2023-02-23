@@ -19,6 +19,8 @@
     <div>
         <div class="wineOrderDiv">
             <?php
+
+
             if (!(isset($_SESSION['cart']))) {
                 $_SESSION['cart'] = array();
             } //if cart
