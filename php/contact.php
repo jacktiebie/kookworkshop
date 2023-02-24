@@ -28,46 +28,10 @@
           <?php
           if (isset($_SESSION["useruid"])) {
           ?>
-          <?php
-            $sql = "SELECT usersRoles FROM users WHERE usersUid= '$useruid'";
-            $result = mysqli_query($conn, $sql);
-            $row = mysqli_fetch_array($result);
-            
-            $klant = 'klant';
-            $barman = 'barman';
-            $gastheer = 'gastheer';
-            $admin = 'admin';
-            $meow = $row['usersRoles'];
-      
-            
-              if ($row['usersRoles'] == $klant) {
-                echo '            <form action="contact.php" method="POST"><br>
+            <form action="contact.php" method="POST"><br>
                 <input type="text" name="titel" placeholder="Uw titel!" required><br>
                     <textarea name="bericht" placeholder="Zet hier uw bericht neer!" required></textarea><br>
-                    <button type="submit" name="submit">Verzenden</button>';
-              }
-              else if ($row['usersRoles'] == $barman) {
-                echo '            <form action="contact.php" method="POST"><br>
-                <input type="text" name="titel" placeholder="Uw titel!" required><br>
-                    <textarea name="bericht" placeholder="Zet hier uw bericht neer!" required></textarea><br>
-                    <button type="submit" name="submit">Verzenden</button>';
-              }
-              else if ($row['usersRoles'] == $gastheer) {
-                echo '            <form action="contact.php" method="POST"><br>
-                <input type="text" name="titel" placeholder="Uw titel!" required><br>
-                    <textarea name="bericht" placeholder="Zet hier uw bericht neer!" required></textarea><br>
-                    <button type="submit" name="submit">Verzenden</button>';
-              }
-              else if ($row['usersRoles'] == $admin) {
-                echo '<form action="contact.php" method="POST"><br>
-                <input type="text" name="titel" placeholder="Uw titel!" required><br>
-                    <textarea name="bericht" placeholder="Zet hier uw bericht neer!" required></textarea><br>
-                    <button type="submit" name="submit">Verzenden</button>';
-              }
-              else {
-                  echo "";
-              }    
-            ?>
+                    <button type="submit" name="submit">Verzenden</button>
             <?php
             $stmt = $conn->prepare("INSERT INTO contact (ID, usersId, titel, bericht) VALUES (null, ?, ?, ?)");
 
