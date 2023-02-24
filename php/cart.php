@@ -32,26 +32,27 @@ if (isset($_GET['pID'])) {
     } //if valid quan
 } //isset
 ?>
+<form action="../includes/wineOrderInc.php" method="GET">
 
-<body>
-    <table>
-        <tr>
-            <th>Item</th>
-            <th>Price</th>
-            <th>Quantity</th>
-            <th>Subtotal</th>
-        </tr>
-        <?php
+    <body>
+        <table>
+            <tr>
+                <th>Item</th>
+                <th>Price</th>
+                <th>Quantity</th>
+                <th>Subtotal</th>
+            </tr>
+            <?php
 
-        $grand = 0;
-        foreach ($_SESSION['cart'] as $key => $val) {
-            $sql = "SELECT * FROM drinkcard where ID = '$key'";
-            $result = mysqli_query($conn, $sql) or die("BAD SQL: $sql");
-            $row = mysqli_fetch_assoc($result);
+            $grand = 0;
+            foreach ($_SESSION['cart'] as $key => $val) {
+                $sql = "SELECT * FROM drinkcard where ID = '$key'";
+                $result = mysqli_query($conn, $sql) or die("BAD SQL: $sql");
+                $row = mysqli_fetch_assoc($result);
 
-            $sub = $val * $row['price'];
-            $grand += $sub;
-            echo "
+                $sub = $val * $row['price'];
+                $grand += $sub;
+                echo "
         <tr>
             <td>{$row['name']}</td>
             <td>$ {$row['price']}</td>
@@ -65,25 +66,25 @@ if (isset($_GET['pID'])) {
             <td>$sub</td>
         </tr>
         ";
-        } //foreach
+            } //foreach
 
-        if (empty($_SESSION['cart'])) {
-            echo "<tr><td colspan='4'>Your cart is empty</td></tr>";
-        } else {
-            echo "<tr><td colspan='4'>Grand Total: $grand</td></tr>";
-        } //empty
-        ?>
+            if (empty($_SESSION['cart'])) {
+                echo "<tr><td colspan='4'>Your cart is empty</td></tr>";
+            } else {
+                echo "<tr><td colspan='4'>Grand Total: $grand</td></tr>";
+            } //empty
+            ?>
 
 
-    </table>
+        </table>
 
-    <a href="<?php echo $_SERVER['PHP_SELF']; ?>?clear=1">Clear Cart</a>
-    </div>
+        <a href="<?php echo $_SERVER['PHP_SELF']; ?>?clear=1">Clear Cart</a>
+        </div>
 
-    <h4>Personal Details</h4>
-    <form action="includes/checkout.inc.php" method="get">
+        <h4>Personal Details</h4>
+
         <input type="submit" value="Check Out">
-    </form>
+</form>
 </body>
 
 </html>
