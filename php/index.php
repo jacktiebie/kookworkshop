@@ -32,39 +32,7 @@
       }
       ?>
     </div> 
-  </div> 
-
-
-
-<?php
-$sql = "SELECT usersRoles FROM users WHERE usersUid= '$useruid'";
-$result = mysqli_query($conn, $sql);
-$row = mysqli_fetch_array($result);
-echo $row['usersRoles'];
-
-$klant = 'klant';
-$barman = 'barman';
-$gastheer = 'gastheer';
-$admin = 'admin';
-
-  if ($row['usersRoles'] == $klant) {
-    echo '';
-  }
-  else if ($row['usersRoles'] == $barman) {
-    echo '';
-  }
-  else if ($row['usersRoles'] == $gastheer) {
-    echo '';
-  }
-  else if ($row['usersRoles'] == $admin) {
-    echo '';
-  }
-  else {
-      echo "";
-  }    
-?>
-
-
+  </div>
 <div class="divider"></div> 
     <div class="blok2">
     <div class="col">

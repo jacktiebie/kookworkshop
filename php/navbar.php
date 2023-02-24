@@ -6,6 +6,7 @@
 </Head>
 <body>
 <?php
+  //error_reporting(0);
   include '../includes/db.inc.php';
   session_start();
   $uid = $_SESSION['userid'];
