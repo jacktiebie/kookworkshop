@@ -7,6 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<a href="./wineOrder.php">Terug naar Wijn Bestellen</a>
 <?php
 include '../includes/db.inc.php';
 include 'navbar.php';

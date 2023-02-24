@@ -66,6 +66,7 @@
                             <input type="submit" name="submit1" style="margin-top:5px;" value="Add to Cart" />
                         </form>
                     </div>
+                    <a href="./cart.php">CART</a>
             <?php
                 }
             }
