@@ -19,6 +19,8 @@
     <div>
         <div class="wineOrderDiv">
             <?php
+            SESSION_START();
+            $useruid = $_SESSION["useruid"];
 
 
             if (!(isset($_SESSION['cart']))) {
