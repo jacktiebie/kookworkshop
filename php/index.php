@@ -48,38 +48,10 @@ $gastheer = 'gastheer';
 $admin = 'admin';
 
   if ($row['usersRoles'] == $klant) {
-    echo '<div class="divider"></div> 
-    <div class="blok2">
-    <div class="col">
-        <img src="../foto/1920x3000px.png">
-        <p>Voor de best kookworkshop</p>
-      </div> 
-      <div class="col">
-        <img src="../foto/5645.png">
-        <p>Voor de best kookworkshop</p>
-      </div> 
-      <div class="col">
-        <img src="../foto/1535336569362360x63336000px.png">
-        <p>Voor de best kookworkshop</p>
-      </div> 
-    </div>';
+    echo '';
   }
   else if ($row['usersRoles'] == $barman) {
-    echo '<div class="divider"></div> 
-    <div class="blok2">
-    <div class="col">
-        <img src="../foto/1920x3000px.png">
-        <p>Voor de best kookworkshop</p>
-      </div> 
-      <div class="col">
-        <img src="../foto/5645.png">
-        <p>Voor de best kookworkshop</p>
-      </div> 
-      <div class="col">
-        <img src="../foto/1535336569362360x63336000px.png">
-        <p>Voor de best kookworkshop</p>
-      </div> 
-    </div>';
+    echo '';
   }
   else if ($row['usersRoles'] == $gastheer) {
     echo '';
@@ -88,12 +60,26 @@ $admin = 'admin';
     echo '';
   }
   else {
-      echo "failed";
+      echo "";
   }    
 ?>
 
 
-
+<div class="divider"></div> 
+    <div class="blok2">
+    <div class="col">
+        <img src="../foto/1920x3000px.png">
+        <p>Voor de best kookworkshop</p>
+      </div> 
+      <div class="col">
+        <img src="../foto/5645.png">
+        <p>Voor de best kookworkshop</p>
+      </div> 
+      <div class="col">
+        <img src="../foto/1535336569362360x63336000px.png">
+        <p>Voor de best kookworkshop</p>
+      </div> 
+    </div>
   <div class="divider"></div> 
   <div class="blok3">
   <div class="col">

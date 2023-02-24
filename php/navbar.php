@@ -20,7 +20,7 @@
     if (isset($_SESSION["useruid"])) {
   ?>
   <a href="index.php">Home</a>
-    <a href="reserveringen.php">Reserveren</a>
+    <a href="reserveren.php">Reserveren</a>
     <a href="workshop.php">Workshop</a>
     <a href="contact.php">Contact</a>
     <a href="../includes/logout.inc.php">Uitloggen</a>
